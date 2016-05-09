@@ -1,0 +1,41 @@
+//Notes - Higher order functions
+
+* Abstraction: In the context of programming, these kinds of vocabularies are usually called abstractions. Abstractions hide details and give us the ability to talk about problems at a higher (or more abstract) level.
+
+* Higher-order functions: Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+
+* Some standard array functions:
+
+	1. array.forEach(functionValue)
+	Description: This standard function of array object traverses through the array elements and processes them according to the functionValue being passed.
+	Returns: array object
+
+	2. array.filter(functionValue)
+	Description: It filters out the elements in an array that don’t pass a test.
+	Returns: array
+	
+	3. array.map(functionValue)
+	Description: The map method transforms an array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array, but its content will have been “mapped” to a new form by the function.
+	Returns: array
+	
+	4. array.reduce(functionValue)
+	Description: You can think of it as folding up the array, one element at a time. When summing numbers, you’d start with the number zero and, for each element, combine it with the current sum by adding the two.
+	**If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element.
+	Returns: a single value of type depending on the reverse function parameter.
+
+* Its possible to return function values
+
+function greaterThan(n) {
+  return function(m) { return m > n; };
+}
+var greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+// → true
+
+* JSON - Javascript object notation
+  
+  All property names have to be surrounded by double quotes, and only simple data expressions are allowed—no function calls, variables, or anything that involves actual computation. Comments are not allowed in JSON.
+
+  JavaScript gives us functions, JSON.stringify and JSON.parse, that convert data from and to this format. The first takes a JavaScript value and returns a JSON-encoded string. The second takes such a string and converts it to the value it encodes
+  
+  
